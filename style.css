@@ -35,9 +35,9 @@
 
 @media(max-width: 900px){
   .card{
-    width: 50vw;
+    width: 60vw;
     height: 50vh;
-    transform: scale(1.7);
+    transform: scale(1.5);
   }
 }
 
