@@ -12,13 +12,19 @@
   </head>
   <body>
     <div id="app" class="fullscreen">
-      <form class="card column" @submit.prevent="getData()" v-if="!data">
-        <md-field>
-          <label>URL eg: https://www.google.com</label>
-          <md-input v-model="url"></md-input>
-        </md-field>
-        <md-button class="md-primary md-raised button" @click="getData()">GET DATA</md-button>
-      </form>
+      <div class="column" v-if="!data">
+        <form class="card column" @submit.prevent="getData()">
+          <md-field>
+            <label>URL</label>
+            <md-input v-model="url"></md-input>
+          </md-field>
+          <md-button class="md-primary md-raised button" @click="getData()">GET DATA</md-button>
+        </form>
+        <h2>Instructions</h2>
+        <ol>
+          <li>Enter a URL</li>
+        </ol>
+      </div>
       <div v-else class="list">
         <h2>Response Time: {{data.ping}}</h2>
         <h2>HTTPS: {{data.ssl}}</h2>
