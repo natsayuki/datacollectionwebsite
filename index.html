@@ -48,10 +48,10 @@
       </div>
       <div v-else class="column">
         <div class="list">
-          <h1>{{data.url}}</h1>
-          <h1>Response Time: {{data.ping}}s</h1>
-          <h1>HTTPS: {{data.ssl}}</h1>
-          <h1>Number of Errors: {{data.errors}}</h1>
+          <h2>{{data.url}}</h2>
+          <h2>Response Time: {{data.ping}}s</h2>
+          <h2>HTTPS: {{data.ssl}}</h2>
+          <h2>Number of Errors: {{data.errors}}</h2>
           <canvas id="chart" width="800" height="400"></canvas>
         </div>
         <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
