@@ -36,3 +36,7 @@
 #app{
   transform: scale(2);
 }
+
+* {
+  font-size: 16px !important;
+}
