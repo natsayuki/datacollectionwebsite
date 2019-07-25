@@ -7,6 +7,7 @@ import json
 import re
 import random
 import sys
+import traceback
 from os import walk
 from collections import Counter
 
@@ -39,7 +40,10 @@ def getHTML(URL):
 
 
 if len(sys.argv) > 1:
-    print(json.dumps(getHTML(sys.argv[1])))
+    try:
+        print(json.dumps(getHTML(sys.argv[1])))
+    except Exception, err:
+        traceback.print_exc()
     sys.stdout.flush()
 else:
     print(getHTML('https://www.google.com'))
