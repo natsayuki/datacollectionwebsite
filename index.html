@@ -47,12 +47,12 @@
         <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
       </div>
       <div v-else class="column">
-        <div class="list">
+        <div>
           <h2>{{data.url}}</h2>
-          <h2>Response Time: {{data.ping}}s</h2>
-          <h2>HTTPS: {{data.ssl}}</h2>
-          <h2>Number of Errors: {{data.errors}}</h2>
-          <h3>Interact with the chart below to see exact numbers</h3>
+          <h3>Response Time: {{data.ping}}s</h3>
+          <h3>HTTPS: {{data.ssl}}</h3>
+          <h3>Number of Errors: {{data.errors}}</h3>
+          <p>Interact with the chart below to see exact numbers</p>
           <canvas id="chart" width="800" height="400"></canvas>
         </div>
         <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
