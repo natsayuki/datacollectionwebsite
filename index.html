@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Data Collector</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -41,7 +42,8 @@
       </div>
       <div v-else-if="!data" class="column">
         <h1>Could not reach "{{url}}"!</h1>
-        <h2>Double check the URL and make sure you didn't forget the http(s)://</h2>
+        <h2>Make sure you typed the URL correctly</h2>
+        <h2>You can copy and paste one for your favorite website</h2>
         <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
       </div>
       <div v-else class="column">

@@ -31,7 +31,14 @@
 .card{
   width: 50vw;
   height: 50vh;
-  transform: scale(1.9);
+}
+
+@media(max-width: 900px){
+  .card{
+    width: 45vw;
+    height: 50vh;
+    transform: scale(2.0);
+  }
 }
 
 /* Loading Icon */
