@@ -17,7 +17,7 @@
           <label>URL eg: https://www.google.com</label>
           <md-input v-model="url"></md-input>
         </md-field>
-        <md-button class="md-primary md-raised" @click="getData()">GET DATA</md-button>
+        <md-button class="md-primary md-raised button" @click="getData()">GET DATA</md-button>
       </form>
       <div v-else class="list">
         <h2>Response Time: {{data.ping}}</h2>
