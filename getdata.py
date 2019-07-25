@@ -40,10 +40,10 @@ def getHTML(URL):
 
 
 if len(sys.argv) > 1:
-    try:
-        print(json.dumps(getHTML(sys.argv[1])))
-    except Exception, err:
-        traceback.print_exc()
+    # try:
+    print(json.dumps(getHTML(sys.argv[1])))
+    # except Exception, err:
+    #     traceback.print_exc()
     sys.stdout.flush()
 else:
     print(getHTML('https://www.google.com'))
