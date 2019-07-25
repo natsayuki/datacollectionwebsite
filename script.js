@@ -6,6 +6,7 @@ let data = {
 let methods = {
   getData(){
     console.log(data.url);
+    data.data = 'loading';
 
     $.post('/getdata', {"url": data.url.toLowerCase()}, result => {
       console.log(result);
