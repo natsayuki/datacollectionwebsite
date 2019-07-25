@@ -1,4 +1,4 @@
-from googlesearch import search
+# from googlesearch import search
 from bs4 import BeautifulSoup as BS
 import requests
 import math
