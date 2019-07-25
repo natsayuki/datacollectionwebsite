@@ -44,7 +44,6 @@
         <h1>Could not reach "{{url}}"!</h1>
         <h2>Make sure you typed the URL correctly</h2>
         <h2>You can copy and paste one for your favorite website</h2>
-        <h3>Interact with the chart below to see exact numbers</h3>
         <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
       </div>
       <div v-else class="column">
@@ -53,6 +52,7 @@
           <h2>Response Time: {{data.ping}}s</h2>
           <h2>HTTPS: {{data.ssl}}</h2>
           <h2>Number of Errors: {{data.errors}}</h2>
+          <h3>Interact with the chart below to see exact numbers</h3>
           <canvas id="chart" width="800" height="400"></canvas>
         </div>
         <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
