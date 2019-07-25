@@ -9,6 +9,16 @@
   height: 100%;
 }
 
+.loadIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
 .column{
   display: flex;
   justify-content: center;
