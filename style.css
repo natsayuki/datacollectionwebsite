@@ -29,10 +29,10 @@
 }
 
 .card{
-  width: 95vw;
+  width: 50vw;
   height: 50vh;
 }
-.button{
-  width: 9rem;
-  height: 4rem !important;
+
+#app{
+  transform: scale(1.5);
 }
