@@ -29,17 +29,10 @@
 }
 
 .card{
-  width: 50vw;
+  width: 95vw;
   height: 50vh;
 }
-
-@media(max-width: 900px){
-  .card{
-    width: 95vw;
-    height: 50vh;
-  }
-  .button{
-    width: 9rem;
-    height: 4rem !important;  
-  }
+.button{
+  width: 9rem;
+  height: 4rem !important;
 }
