@@ -16,7 +16,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 50% !important;
+  width: 1rem !important;
 }
 
 .column{
@@ -69,8 +69,8 @@
   animation: spin 5s infinite;
 }
 .corner{
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   background-color: cornflowerblue;
   display: inline-block;
   animation: cornerMorph 5s infinite;
