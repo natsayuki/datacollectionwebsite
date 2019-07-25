@@ -7,7 +7,7 @@ let methods = {
   getData(){
     console.log(data.url);
 
-    $.post('/getdata', {"url": data.url}, result => {
+    $.post('/getdata', {"url": data.url.toLowerCase()}, result => {
       console.log(result);
       data.data = JSON.parse(result);
       setTimeout(function(){
