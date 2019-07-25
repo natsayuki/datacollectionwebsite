@@ -1,6 +1,6 @@
 let data = {
   "url": "",
-  data: false,
+  data: 'no data',
 }
 
 let methods = {
@@ -53,6 +53,10 @@ let methods = {
             }
         }
     });
+  },
+  goBack(){
+    data.url = "";
+    data.data = "no data";
   },
 }
 

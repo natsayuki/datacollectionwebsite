@@ -12,7 +12,7 @@
   </head>
   <body>
     <div id="app" class="fullscreen">
-      <div class="column" v-if="!data">
+      <div class="column" v-if="data == 'no data'">
         <form class="card column" @submit.prevent="getData()">
           <md-field>
             <label>URL</label>
@@ -20,17 +20,27 @@
           </md-field>
           <md-button class="md-primary md-raised button" @click="getData()">GET DATA</md-button>
         </form>
-        <h2>Instructions</h2>
-        <ol>
-          <li>Enter a URL</li>
-        </ol>
+        <h2>Enter a URL</h2>
+        <ul>
+          <li><h3>Eg: https://www.google.com</h3></li>
+          <li><h3>Make sure it's the full URL.  Don't forget the http(s):// at the start!</h3></li>
+          <li><h3>You can copy and paste a link to your favorite website.</h3></li>
+        </ul>
       </div>
-      <div v-else class="list">
-        <h2>Response Time: {{data.ping}}</h2>
-        <h2>HTTPS: {{data.ssl}}</h2>
-        <h2>Number of Errors: {{data.errors}}</h2>
-        <canvas id="chart" width="800" height="400"></canvas>
-        <!-- <span :class="chart()"></span> -->
+      <div v-else-if="!data" class="column">
+        <h1>Could not reach "{{url}}"!</h1>
+        <h2>Double check the URL and make sure you didn't forget the http(s)://</h2>
+        <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
+      </div>
+      <div v-else class="column">
+        <div class="list">
+          <h1>{{data.url}}</h1>
+          <h1>Response Time: {{data.ping}}s</h1>
+          <h1>HTTPS: {{data.ssl}}</h1>
+          <h1>Number of Errors: {{data.errors}}</h1>
+          <canvas id="chart" width="800" height="400"></canvas>
+        </div>
+        <md-button class="md-primary md-raised" @click="goBack()">GO BACK</md-button>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
