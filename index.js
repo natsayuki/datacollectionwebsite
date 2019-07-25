@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.post("/getdata", (req, res) => {
   url = req.body.url;
 
-  const pythonProcess = spawn('py',["getdata.py", url]);
+  const pythonProcess = spawn('python',["getdata.py", url]);
 
   console.log(url);
   pythonProcess.stdout.on('data', (data) => {
